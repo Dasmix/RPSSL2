@@ -1,0 +1,35 @@
+.game-area {
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    width: 90%;
+    height: 65vh;
+    max-height: 450px;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+}
+.options {
+    width: 85%;
+    margin: 30px auto;
+}
+
+#result {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#player-score {
+    color: green;
+    font-weight: bold;
+}
+#computer-score {
+    color: red;
+    font-weight: bold;
+}
+#reset {
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 1rem;
+}
