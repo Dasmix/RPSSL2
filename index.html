@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Rock, Papers, Scissors, Spock, Lizard</title>
 </head>
+
 <body>
-    <div class="game-area">
+    <header>
         <h1>Paper, Rock, Scissors, Spock, Lizard</h1>
+    </header>
+    <div class="game-area">
         <div class="options">
-            <button aria-label="paper" id="paper">
+            <button aria-label="paper" id="paper" class="btn btn--big">
                 <i class="fa-solid fa-hand"></i>
             </button>
-            <button aria-label="rock" id="rock">
+            <button aria-label="rock" id="rock" class="btn btn--big"> 
                 <i class="fa-solid fa-hand-back-fist"></i>
             </button>
-            <button aria-label="scissors" id="scissors">
+            <button aria-label="scissors" id="scissors" class="btn btn--big">
                 <i class="fa-solid fa-hand-scissors"></i>
             </button>
-            <button aria-label="spock" id="spock">
+            <button aria-label="spock" id="spock" class="btn btn--big">
                 <i class="fa-solid fa-hand-spock"></i>
             </button>
-            <button aria-label="lizard" id="lizard">
+            <button aria-label="lizard" id="lizard" class="btn btn--big">
                 <i class="fa-solid fa-hand-lizard"></i>
             </button>
         </div>
         <div id="result"></div>
         <div class="score">
-            <p>Score:</p>
-            <p id="player-score">0</p>
-            <p>-</p>
-            <p id="computer-score">0</p>
+            <p class="scores">Score:</p>
+            <p class="scores">Player: <span id="player-score">0</span></p>
+            <p class="scores">-</p>
+            <p class="scores">Computer: <span id="computer-score">0</span></p>
         </div>
-        <button id="reset">Reset</button>
+        <div class="reset">
+            <button id="reset">Reset</button>
+        </div>
     </div>
 </body>
 <script src="https://kit.fontawesome.com/6f2dfeee83.js" crossorigin="anonymous"></script>
