@@ -1,5 +1,13 @@
+/** Header **/
+header {
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+/** Game Area **/
 .game-area {
-    background-color: #FFFFFF;
+    background-color: #F5F7FA;
     box-sizing: border-box;
     width: 90%;
     height: 65vh;
@@ -8,37 +16,65 @@
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+/** Options Section **/
 .options {
     width: 85%;
     margin: 30px auto;
 }
 
+/** Result Display **/
 #result {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #445361;
 }
 
+/** Score Colors **/
 #player-score {
-    color: green;
+    color: #28A745;
     font-weight: bold;
 }
 #computer-score {
-    color: red;
+    color: #DC3545;
     font-weight: bold;
 }
+
+/** Reset Button **/
 #reset {
     padding: 10px 20px;
     margin: 0 5px;
     font-size: 1rem;
+    background-color: #007BFF; /* Primary blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#reset:hover {
+    background-color: #0056b3; 
 }
 
+/** Button Styles **/
 .btn {
     width: 220px;
     height: 60px;
     text-transform: uppercase;
     letter-spacing: 1.2px;
+    background-color: #E9ECEF;
+    color: #343A40;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #CED4DA;
 }
 .btn:focus {
     outline: none;
@@ -46,16 +82,84 @@
 .btn--big {
     padding-top: 10px;
     background-color: white;
-    border: 5px solid;
+    border: 5px solid #007BFF;
     width: 80px;
     height: 80px;
     font-size: 3.2rem;
     margin: 0 25px;
+    border-radius: 50%;
     transition: all 0.5s;
 }
 .btn--big::after {
-    content: attr(data-type);
     font-size: 1rem;
-    color: #445361;
+    color: darkgrey;
     position: relative;
+}
+.reset {
+    text-align: center;
+}
+.scores {
+    display: inline-block;
+    padding: 25px;
+}
+.score {
+    margin: 5px auto;
+    width: 80%;
+    font-size: 1.2rem;
+    padding-top: 20px;
+    text-align: center;
+    color: #495057; 
+}
+
+
+/** Media query for devices with 425px of max width **/
+@media (max-width: 425px) {
+
+    .game-area {
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1%;
+        max-height: 1000px;
+        height: 550px;
+
+    }
+    .btn--big {
+        padding-top: 10px;
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+        border-radius: 100%;
+        margin: auto;
+    }
+
+    .btn {
+    margin: 5px; 
+    }
+
+    .options {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+}
+    #result {
+        height: 58px;
+    }
+
+/** Media query for devices with 768px of max width **/
+@media (max-width: 768px) {
+
+    .btn--big {
+        padding-top: 10px;
+        width: 80px;
+        height: 80px;
+        font-size: 3.2rem;
+        margin: auto;
+    }
+
+    .options {
+        display: flex;
+    }
 }
